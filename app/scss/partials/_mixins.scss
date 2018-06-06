@@ -1,0 +1,10 @@
+@mixin nav-ul-styles {
+    display: inline-flex;
+    list-style: none;
+    li {
+      margin: 0 15px;
+      a, a:hover {
+        text-decoration: none;
+      }
+    }
+}

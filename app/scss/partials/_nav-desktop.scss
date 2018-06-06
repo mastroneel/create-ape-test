@@ -1,0 +1,64 @@
+.nav-desktop {
+  background: $secondary-background;
+  height: 100px;
+  padding: 0 60px;
+  ul {
+    @include nav-ul-styles;
+    line-height: 100px;
+    li {
+      a, a:visited, a:hover {
+        color: $primary-font-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+  .search {
+    float: right;
+    margin-top: 25px;
+    input {
+      height: 50px;
+      width: 370px;
+      border: 1px solid #ccc;
+      padding: 0 10px;
+    }
+    i {
+      margin-left: -40px;
+      color: $primary-font-color;
+    }
+  }
+}
+
+@media (max-width: 1310px) {
+  .nav-desktop {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1165px) {
+  .nav-desktop {
+    ul {
+      li {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 995px) {
+  .nav-desktop {
+    padding: 0;
+    .search {
+      input {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .nav-desktop {
+    display: none;
+  }
+}

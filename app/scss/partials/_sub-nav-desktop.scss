@@ -1,0 +1,54 @@
+.sub-nav-desktop {
+  min-height: 80px;
+  max-height: 80px;
+  background: $accent-color-1;
+  line-height: 80px;
+  ul {
+    @include nav-ul-styles;
+    li {
+      padding: 0 35px;
+      a, a:visited, a:hover {
+        color: $secondary-font-color;
+      }
+    }
+    .active {
+      background: $sub-nav-active-background;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .sub-nav-desktop {
+    ul {
+      li {
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 805px) {
+  .sub-nav-desktop {
+    ul {
+      li {
+        padding: 0 10px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .sub-nav-desktop {
+    max-height: none;
+    line-height: 50px;
+    text-align: center;
+    ul {
+      display: block;
+      li {
+        padding: 0 10px;
+        margin: 0 5px;
+      }
+    }
+  }
+}

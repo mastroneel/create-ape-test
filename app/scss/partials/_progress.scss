@@ -1,0 +1,87 @@
+.progress {
+  text-align: center;
+  min-height: 230px;
+  padding-top: 40px;
+  background: $secondary-background;
+  h1 {
+    color: $primary-font-color;
+    // display: block;
+    margin: 0 auto;
+  }
+  .circle-container {
+    margin: 40px auto;
+    ul {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-flex;
+        margin: 0 -2px;
+      }
+      .circle {
+        text-align: center;
+        // margin: 0 105px;
+        background: $accent-color-2;
+        border: 8px solid $accent-color-2;
+        border-radius: 50%;
+        height: 50px !important;
+        width: 50px !important;
+        i {
+          color: $secondary-font-color;
+          font-size: 18px;
+          padding-left: 8px;
+          padding-top: 6px;
+        }
+        .fa-map-marker {
+          padding-left: 10px;
+        }
+        .fa-align-justify {
+          padding-left: 8px;
+        }
+      }
+      .unfinished {
+        background: $secondary-background;
+        border-color: #ccc;
+        i {
+          color: $primary-font-color;
+        }
+      }
+      .line {
+        width: 220px;
+        height: 10px;
+        border: 4px solid;
+      }
+      .solid-line {
+        background: $accent-color-2;
+        border-color: $accent-color-2;
+      }
+      .hollow-line {
+        background: $secondary-background;
+        border-color: #ccc;
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 885px) {
+  .progress {
+    ul {
+      .line {
+        width: 105px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .progress {
+    ul {
+      .line {
+        width: 40px !important;
+      }
+    }
+  }
+}
