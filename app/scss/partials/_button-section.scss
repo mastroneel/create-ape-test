@@ -1,0 +1,14 @@
+.button-section {
+  background: $secondary-background;
+  min-height: 160px;
+  button {
+    border: 3px solid #ccc;
+    color: $primary-font-color;
+    font-style: italic;
+    font-weight: 700;
+    height: 60px;
+    padding: 0 35px;
+    margin: 10px;
+    margin-top: 60px;
+  }
+}

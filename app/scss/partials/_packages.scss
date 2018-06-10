@@ -1,3 +1,5 @@
+
+
 .packages-header {
   background: $accent-color-2;
   padding: 40px 0;
@@ -9,4 +11,222 @@
 
 .packages {
   background: $main-background;
+  color: $primary-font-color;
+  margin-top: 60px;
+  padding-bottom: 75px;
+  .package-top, ul {
+    padding: 30px;
+  }
+  .package {
+    background: $secondary-background;
+    border: 3px solid #ccc;
+    min-height: 1050px;
+    margin: 10px auto;
+    h5 {
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 80px;
+      margin: 10px;
+      padding: 0;
+    }
+    p {
+      text-transform: uppercase;
+    }
+    .price-1 {
+      color: $accent-color-2;
+    }
+    .price-2 {
+      color: $accent-color-1;
+    }
+    button {
+      color: $secondary-font-color;
+      background: $accent-color-3;
+      border: 4px solid $accent-color-3;
+      height: 60px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    ul {
+      margin-top: 20px;
+      list-style: none;
+      line-height: 2.5;
+      li::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        margin-bottom: 3px;
+        margin-right: 10px;
+        background-color: $accent-color-2;
+        border: 1px solid $accent-color-2;
+      }
+    }
+  }
+  .package-active {
+    border: 3px solid $accent-color-3;
+    background: $package-active-background;
+    img {
+      float: right;
+      margin-top: -40px;
+    }
+    h1 {
+      background: $package-active-background;
+    }
+    .price-3 {
+      color: $accent-color-3;
+    }
+  }
+}
+
+// Mobile styles
+.packages-mobile {
+  width: 80%;
+  margin: 10px auto;
+  .slick-slider {
+    padding-bottom: 40px;
+    .slick-active button:before {
+    background: #83bf23;
+    }
+    .slick-dots li button:before {
+      font-size: 15px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      content: '';
+      border: 1px solid #83bf23;
+      border-radius: 50%;
+      opacity: 1;
+      text-align: center;
+      color: #000;
+    }
+    .slick-initialized .slick-slide {
+      margin-top: 40px;
+    }
+    .previous-arrow-container, .next-arrow-container {
+      border: 3px solid #ccc;
+      height: 190px;
+    }
+    .previous-arrow-container {
+      position: absolute;
+      left: -22%;
+      top: 40px;
+      width: 20%;
+      .previous-arrow {
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid #ff6700;
+        display: block;
+        margin-top: 80px;
+        margin-left: 50%;
+      }
+    }
+    .next-arrow-container {
+      position: absolute;
+      right: -22%;
+      top: 40px;
+      width: 20%;
+      .next-arrow {
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 20px solid #ff6700;
+        display: block;
+        margin-top: 80px;
+        float: right;
+        margin-right: 50%;
+      }
+    }
+    .slick-list {
+      overflow: visible;
+      overflow-y: visible;
+      overflow-x: hidden;
+    }
+  }
+  .package {
+    margin-top: 40px !important;
+    .price-1, .price-2, .price-3 {
+      color: $accent-color-3;
+    }
+    img {
+      float: right;
+      margin-top: -40px;
+    }
+    ul {
+      li::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        margin-bottom: 3px;
+        margin-right: 10px;
+        background-color: $accent-color-1;
+        border: 1px solid $accent-color-1;
+      }
+    }
+  }
+}
+
+
+// Media queries
+
+@media (max-width: 1199px) {
+  .packages {
+    .container {
+      padding: 0;
+    }
+    .package {
+      min-height: 1150px;
+    }
+  }
+}
+
+// Show desktop for larger screens
+@media (min-width: 992px) {
+  .packages-desktop {
+    display: block;
+  }
+  .packages-mobile {
+    display: none;
+  }
+}
+
+// Show mobile and tweak styles for smaller screens
+@media (max-width: 991px) {
+  .packages-desktop {
+    display: none;
+  }
+  .packages-mobile {
+    display: block;
+  }
+  .packages-header {
+    background: $accent-color-1;
+  }
+}
+
+@media (min-width: 470px) {
+  .packages-mobile {
+    .previous-arrow-container {
+      .previous-arrow {
+        margin-left: 60% !important;
+      }
+    }
+    .next-arrow-container {
+      .next-arrow {
+        margin-right: 60% !important;
+      }
+    }
+  }
 }

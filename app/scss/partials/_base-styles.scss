@@ -7,6 +7,11 @@ body {
   background: $main-background;
 }
 
+.page-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .row {
   padding: 0;
   margin: 0;

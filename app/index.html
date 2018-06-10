@@ -4,9 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
     <title></title>
   </head>
   <body>
+  <!-- page container -->
+  <div class="page-container">
+
+
+  <!-- mobile navigation -->
+  <div id="container" class="nav-mobile">
+    <img src="images/logo.png" alt="logo" />
+    <div class="search-container">
+      <i class="fa fa-search"></i>
+    </div>
+    <span id="mobile-menu-button"><a href="#menu"></a></span>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Main</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- end mobile navigation -->
+
+  <script>
+  // Mobile menu trigger
+  $('#mobile-menu-button').on('click', function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $('.nav').toggleClass("active");
+  });
+  </script>
 
   <!-- desktop main navigation -->
   <nav class="nav-desktop">
@@ -43,61 +82,262 @@
   </nav>
   <!-- end desktop sub navigation -->
 
-
-
-  <div class="text-center">
+  <!-- progress header -->
+  <div class="text-center progress-header">
     <h1>Post New Job Opening</h1>
   </div>
+  <!-- end progress header -->
 
   <!-- progress circles section -->
+
+
   <div class="progress text-center">
     <div class="circle-container">
-      <ul>
+      <ul class="circles">
         <li class="circle text-center">
           <i class="fa fa-check"></i>
         </li>
-        <li class="line solid-line"></li>
+
         <li class="circle">
           <i class="fa fa-map-marker"></i>
         </li>
-        <li class="line solid-line"></li>
+
         <li class="circle">
-          <i class="fa fa-align-justify"></i>
+          <img src="images/carousel.png" alt="select" />
         </li>
-        <li class="line hollow-line"></li>
+
         <li class="circle unfinished">
           <i class="fa fa-bell"></i>
         </li>
       </ul>
+      <ul class="lines">
+        <li class="line solid-line"></li>
+        <li class="line solid-line"></li>
+        <li class="line hollow-line"></li>
+      </ul>
+      <ul class="circle-text text-center">
+        <li>Role</li>
+        <li>Zip Code</li>
+        <li>Choose a Package</li>
+        <li>Notifications</li>
+      </ul>
     </div>
   </div>
+
   <!-- end progress circles section -->
 
 
+  <!-- package section header -->
   <div class="packages-header text-center">
     <h3>Now Choose a Package</h3>
   </div>
+  <!-- end package section header -->
 
-  <div class="packages">
+  <!-- mobile package section -->
+  <div class='packages packages-mobile'>
+    <div class='single-item'>
+      <div class="package-container">
+        <div class="package">
+          <div class="package-top">
+            <h5>Premium</h5>
+            <h1 class="price-2">$159</h1>
+            <p>
+              Post an immediate temp (fill-in) opening
+            </p>
+          </div>
+          <button href="#">Select</button>
+          <ul>
+            <li>Sends Email Alerts</li>
+            <li>Sends Moblie Alerts</li>
+            <li>Targets Locally</li>
+            <li>Targets Nationally</li>
+            <li>View Applicant Profiles</li>
+            <li>Direct Message with Candidates</li>
+            <li>View Profile Photos</li>
+            <li>View DISC Assessments</li>
+            <li>View Skill Assessments</li>
+            <li>View Value and Culture Assessments</li>
+            <li>View Alignment Questionnaire Fill Temp Positions</li>
+            <li>Fill FULL or PART TIME Positions</li>
+            <li>Social Distribution</li>
+          </ul>
+        </div>
+      </div>
+      <div class="package-container">
+        <div class="package">
+          <div class="package-top">
+            <h5>Premium</h5>
+            <h1 class="price-2">$159</h1>
+            <p>
+              Post an immediate temp (fill-in) opening
+            </p>
+          </div>
+          <button href="#">Select</button>
+          <ul>
+            <li>Sends Email Alerts</li>
+            <li>Sends Moblie Alerts</li>
+            <li>Targets Locally</li>
+            <li>Targets Nationally</li>
+            <li>View Applicant Profiles</li>
+            <li>Direct Message with Candidates</li>
+            <li>View Profile Photos</li>
+            <li>View DISC Assessments</li>
+            <li>View Skill Assessments</li>
+            <li>View Value and Culture Assessments</li>
+            <li>View Alignment Questionnaire Fill Temp Positions</li>
+            <li>Fill FULL or PART TIME Positions</li>
+            <li>Social Distribution</li>
+          </ul>
+        </div>
+      </div>
+    <div>
+      <div class="package">
+        <img src="images/best-choice-mobile.png" alt="best-choice" />
+        <div class="package-top">
+          <h5>Super Premium</h5>
+          <h1 class="price-3">$399</h1>
+          <p>
+            Post an immediate temp (fill-in) opening
+          </p>
+        </div>
+        <button href="#">Select</button>
+        <ul>
+          <li>Sends Email Alerts</li>
+          <li>Sends Moblie Alerts</li>
+          <li>Targets Locally</li>
+          <li>Targets Nationally</li>
+          <li>View Applicant Profiles</li>
+          <li>Direct Message with Candidates</li>
+          <li>View Profile Photos</li>
+          <li>View DISC Assessments</li>
+          <li>View Skill Assessments</li>
+          <li>View Value and Culture Assessments</li>
+          <li>View Alignment Questionnaire Fill Temp Positions</li>
+          <li>Fill FULL or PART TIME Positions</li>
+          <li>Social Distribution</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end mobile backage section -->
+
+<script>
+// initialize Slick Carousel
+$(document).ready(function(){
+  $(".single-item").slick({
+  	dots: true,
+    prevArrow:'<div class="previous-arrow-container"><div class="previous-arrow slick-arrow"></div></div>',
+    nextArrow:'<div class="next-arrow-container"><div class="next-arrow slick-arrow"></div></div>',
+    centerMode: false
+  });
+});
+</script>
+
+  <!-- desktop packages section -->
+  <div class="packages packages-desktop">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <p>test</p>
+        <div class="col-xs-12 col-lg-4">
+          <div class="package">
+            <div class="package-top">
+              <h5>Basic</h5>
+              <h1 class="price-1">$85</h1>
+              <p>
+                Post an immediate temp (fill-in) opening
+              </p>
+            </div>
+            <button href="#">Select</button>
+            <ul>
+              <li>Sends Email Alerts</li>
+              <li>Sends Moblie Alerts</li>
+              <li>Targets Locally</li>
+              <li>Targets Nationally</li>
+              <li>View Applicant Profiles</li>
+              <li>Direct Message with Candidates</li>
+              <li>View Profile Photos</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4">
-          <p>test</p>
+        <div class="col-xs-12 col-lg-4">
+          <div class="package">
+            <div class="package-top">
+              <h5>Premium</h5>
+              <h1 class="price-2">$159</h1>
+              <p>
+                Post an immediate temp (fill-in) opening
+              </p>
+            </div>
+            <button href="#">Select</button>
+            <ul>
+              <li>Sends Email Alerts</li>
+              <li>Sends Moblie Alerts</li>
+              <li>Targets Locally</li>
+              <li>Targets Nationally</li>
+              <li>View Applicant Profiles</li>
+              <li>Direct Message with Candidates</li>
+              <li>View Profile Photos</li>
+              <li>View DISC Assessments</li>
+              <li>View Skill Assessments</li>
+              <li>View Value and Culture Assessments</li>
+              <li>View Alignment Questionnaire Fill Temp Positions</li>
+              <li>Fill FULL or PART TIME Positions</li>
+              <li>Social Distribution</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4">
-          <p>test</p>
+        <div class="col-xs-12 col-lg-4">
+          <div class="package package-active">
+            <img src="images/best-choice.png" alt="best-choice" />
+            <div class="package-top">
+              <h5>Super Premium</h5>
+              <h1 class="price-3">$399</h1>
+              <p>
+                Post an immediate temp (fill-in) opening
+              </p>
+            </div>
+            <button href="#">Select</button>
+            <ul>
+              <li>Sends Email Alerts</li>
+              <li>Sends Moblie Alerts</li>
+              <li>Targets Locally</li>
+              <li>Targets Nationally</li>
+              <li>View Applicant Profiles</li>
+              <li>Direct Message with Candidates</li>
+              <li>View Profile Photos</li>
+              <li>View DISC Assessments</li>
+              <li>View Skill Assessments</li>
+              <li>View Value and Culture Assessments</li>
+              <li>View Alignment Questionnaire Fill Temp Positions</li>
+              <li>Fill FULL or PART TIME Positions</li>
+              <li>Social Distribution</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- end desktop packages section -->
 
+  <!-- button section -->
+  <div class="button-section text-center">
+    <button href="#">
+      Back
+    </button>
+    <button href="#">
+      View All Packages
+    </button>
+  </div>
+  <!-- end button section -->
 
-    <!--build:js js/main.min.js -->
+  <!-- footer -->
+  <footer class="text-center">
+    <p>Copyright ©2017 Dental Post, Inc. - All rights reserved.</p>
+  </footer>
+  <!-- end footer -->
 
-    <!-- endbuild -->
+  </div>
+  <!-- end page container -->
 
     <!-- Hi CreateApe! -->
   </body>
