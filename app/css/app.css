@@ -8846,11 +8846,16 @@ h1 {
         border-left: none;
         border-right: none; }
   .progress .lines {
+    z-index: 1;
     margin-top: -35px !important; }
     .progress .lines li {
       margin: 0 21px !important; }
-  .progress .circles li {
-    margin: 0 105px !important; }
+    .progress .lines .hollow-line {
+      margin-left: 23px !important; }
+  .progress .circles {
+    z-index: 10; }
+    .progress .circles li {
+      margin: 0 105px !important; }
   .progress .circle-text {
     margin-top: 20px !important;
     max-width: 870px;

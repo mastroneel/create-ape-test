@@ -81,15 +81,21 @@
     }
   }
   .lines {
+    z-index: 1;
     margin-top: -35px !important;
     li {
       margin: 0 21px !important;
     }
+    .hollow-line {
+      margin-left: 23px !important;
+    }
   }
-  .circles li {
-    margin: 0 105px !important;
+  .circles {
+    z-index: 10;
+    li {
+      margin: 0 105px !important;
+    }
   }
-
   .circle-text {
     margin-top: 20px !important;
     max-width: 870px;
